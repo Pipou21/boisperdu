@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Les Traces de Boisperdu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>Les Traces de Boisperdu</h1>
+    <p>Entrez un code pour débloquer un texte :</p>
+    <input type="text" id="codeInput" placeholder="Ex: B131-14" />
+    <button onclick="checkCode()">Valider</button>
+    <div id="message"></div>
+    <section id="unlockedTexts"></section>
+    <button onclick="resetProgress()">Réinitialiser ma partie</button>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
