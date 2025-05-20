@@ -1,5 +1,13 @@
 {
-  "B131-14": "Théo dit qu’il était à la fontaine au moment des faits...",
-  "A1-3": "Une trace de pas mène vers la forêt, mais s’arrête brusquement...",
-  "C42": "Le carnet retrouvé contient des notes illisibles, mais une page est marquée d’un symbole étrange."
+  "B131-14": {
+    "titre": "Théo (31) interrogé sur ce qu’il s’est passé en B1",
+    "texte": "Théo dit qu’il était à la fontaine au moment des faits...",
+    "categorie": "Interrogatoire",
+    "image": "image_theo.png"
+  },
+  "A1-3": {
+    "titre": "Observation de la zone A1",
+    "texte": "Une trace de pas mène vers la forêt, mais s’arrête brusquement...",
+    "categorie": "Exploration"
+  }
 }
