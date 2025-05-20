@@ -1,6 +1,7 @@
 let data = {};
 
-fetch("data.json")
+// ⚠️ Ligne modifiée pour forcer rechargement de data.json
+fetch("data.json?" + new Date().getTime())
   .then((response) => response.json())
   .then((json) => {
     data = json;
