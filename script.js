@@ -14,7 +14,7 @@ function checkCode() {
 
   if (data[code]) {
     if (!localStorage.getItem(code)) {
-      localStorage.setItem(code, data[code]);
+      localStorage.setItem(code, JSON.stringify(data[code]));
     }
     message.textContent = "";
     displayUnlockedTexts();
@@ -30,10 +30,25 @@ function displayUnlockedTexts() {
   container.innerHTML = "";
 
   Object.keys(localStorage).forEach((key) => {
-    if (data[key]) {
-      const div = document.createElement("div");
-      div.innerHTML = `<h3>${key}</h3><p>${localStorage.getItem(key)}</p>`;
-      container.appendChild(div);
+    const raw = localStorage.getItem(key);
+    try {
+      const entry = JSON.parse(raw);
+      if (entry.titre && entry.texte) {
+        const div = document.createElement("div");
+        div.className = "entry";
+
+        div.innerHTML = `
+          <h3>${entry.titre}</h3>
+          <div class="entry-content">
+            ${entry.image ? `<img src="${entry.image}" alt="illustration" />` : ""}
+            <p>${entry.texte}</p>
+          </div>
+          ${entry.categorie ? `<small style="color: gray;">Catégorie : ${entry.categorie}</small>` : ""}
+        `;
+        container.appendChild(div);
+      }
+    } catch (e) {
+      console.error("Erreur lecture entrée locale :", raw);
     }
   });
 }

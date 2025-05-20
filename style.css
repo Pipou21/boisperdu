@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
   padding: 2em;
-  max-width: 600px;
+  max-width: 700px;
   margin: auto;
 }
 
@@ -34,9 +34,20 @@ button {
   margin-bottom: 0.2em;
 }
 
-#unlockedTexts p {
+.entry {
   background: #fff;
   padding: 1em;
   border-left: 4px solid #333;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
+}
+
+.entry img {
+  width: 80px;
+  margin-right: 1em;
+}
+
+.entry-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
 }
